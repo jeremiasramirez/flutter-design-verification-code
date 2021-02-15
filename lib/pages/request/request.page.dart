@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+// import 'package:flutter_verification/pages/done/done.page.dart';
 import 'package:flutter_verification/pages/request/widgets/appbar.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/description-number.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/fieldcode.widget.dart';
@@ -32,7 +34,8 @@ class RequestedPage extends State<RequestedPageFul>{
             FieldCode(),
             TimingCode(),
             QuestionCode(),
-            QuestionCode().resend()
+            QuestionCode().resend(),
+            Sent()
 
           ]
         ),
@@ -43,7 +46,40 @@ class RequestedPage extends State<RequestedPageFul>{
   }
 }
 
- 
+
+class Sent extends StatelessWidget{
+  
+  Widget build(context){
+    
+    return Container(
+
+      padding:EdgeInsets.only(top:20,bottom:10,left:20,right:20),
+      margin: EdgeInsets.only(top:30,bottom:0),
+      width: 310,
+      height:80,
+      child:ClipRRect(
+        borderRadius:BorderRadius.circular(40),
+        child: TextButton(
+        // elevation:0,
+        // color: Colors.blue[700],
+        onPressed: (){
+          // this.toDone(context);
+        },
+        child: Text(
+        'Submit',
+        style: TextStyle(fontSize: 22.0, color:Colors.white),
+       )
+      )
+      ), 
+      
+
+    );
 
 
-//
+  }
+  void toDone(context){
+    // CupertinoPageRoute(builder: (context){
+    //  return DonePageFul();
+    // });
+  }
+}
