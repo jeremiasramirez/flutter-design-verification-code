@@ -27,7 +27,7 @@ class FieldCode extends StatelessWidget{
       padding:EdgeInsets.only(top:25,left:26),
       child: Text(
         value.toString(),
-        style: TextStyle(fontWeight: FontWeight.bold, color:Colors.blue[600],fontSize: 20)
+        style: TextStyle(fontWeight: FontWeight.bold, color:Colors.grey[700],fontSize: 20)
       ),
       decoration:BoxDecoration(
         color:Colors.grey[200],
