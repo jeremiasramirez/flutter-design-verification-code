@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_verification/pages/request/widgets/appbar.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/description-number.widget.dart';
+import 'package:flutter_verification/pages/request/widgets/fieldcode.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/title.widget.dart';
 
 
@@ -25,7 +26,8 @@ class RequestedPage extends State<RequestedPageFul>{
           children: [
 
             TitleRequest(),
-            DescriptionNumber()
+            DescriptionNumber(),
+            FieldCode()
 
           ]
         ),
@@ -35,5 +37,7 @@ class RequestedPage extends State<RequestedPageFul>{
 
   }
 }
+
+
 
 
