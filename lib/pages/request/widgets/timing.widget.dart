@@ -8,7 +8,7 @@ class TimingCode extends StatelessWidget{
     return Container(
 
       padding:EdgeInsets.only(top:10,bottom:10,left:20,right:20),
-      margin: EdgeInsets.only(top:22),
+      margin: EdgeInsets.only(top:25,bottom:0),
 
       child: Text(
         '00:01',

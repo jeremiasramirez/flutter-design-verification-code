@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_verification/pages/request/widgets/appbar.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/description-number.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/fieldcode.widget.dart';
+import 'package:flutter_verification/pages/request/widgets/resend-code.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/timing.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/title.widget.dart';
 
@@ -29,7 +30,9 @@ class RequestedPage extends State<RequestedPageFul>{
             TitleRequest(),
             DescriptionNumber(),
             FieldCode(),
-            TimingCode()
+            TimingCode(),
+            QuestionCode(),
+            QuestionCode().resend()
 
           ]
         ),
@@ -40,7 +43,7 @@ class RequestedPage extends State<RequestedPageFul>{
   }
 }
 
+ 
 
 
-
-// do you want to resend the code?
+//
