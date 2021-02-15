@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_verification/pages/request/widgets/appbar.widget.dart';
+import 'package:flutter_verification/pages/request/widgets/description-number.widget.dart';
+import 'package:flutter_verification/pages/request/widgets/title.widget.dart';
 
 
 class RequestedPageFul extends StatefulWidget{
@@ -8,19 +11,29 @@ class RequestedPageFul extends StatefulWidget{
 
 class RequestedPage extends State<RequestedPageFul>{
 
-
+ @override
   Widget build(context){
 
     return MaterialApp(
+    
       debugShowCheckedModeBanner: false,
       home:Scaffold(
-        appBar:AppBar(
-          backgroundColor: Colors.white,
-          leading: Icon(Icons.arrow_back_ios,color:Colors.grey[800], size: 33.1)
-        )
+        backgroundColor:Colors.white,
+        appBar: appBarRequest(),
+        body: Column(
+          
+          children: [
+
+            TitleRequest(),
+            DescriptionNumber()
+
+          ]
+        ),
       )
 
     );
 
   }
 }
+
+
