@@ -41,9 +41,7 @@ class Sent extends StatelessWidget{
      
     return Container(
       margin: EdgeInsets.only(top:10,bottom:20),
-      child: CircularProgressIndicator(
-        backgroundColor: Colors.blue[700]
-      )
+      child: Icon(Icons.check_circle_rounded,color:Colors.green,size:28)
 
     );
   }

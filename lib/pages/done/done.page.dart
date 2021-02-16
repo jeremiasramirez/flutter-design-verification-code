@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_verification/pages/done/widgets/image-done.widget.dart';
 
 
 class DonePageFul extends StatefulWidget{
@@ -12,14 +13,49 @@ class DonePage extends State<DonePageFul>{
   Widget build(context){
 
     return MaterialApp(
-
+      color: Colors.white,
+      debugShowCheckedModeBanner: false,
       home:Scaffold(
-        appBar:AppBar(
-          title: Text('Done')
-        )
+        body: ListView( 
+          
+          physics:BouncingScrollPhysics(),
+          children: [
+           
+            ImageDone(),
+            TitleDone()
+
+          ]
+        ),
       )
 
     );
 
   }
 }
+
+class TitleDone extends StatelessWidget{
+
+  Widget build(context){
+
+    return Container(
+
+      margin: EdgeInsets.only(top: 20),
+      
+      alignment: Alignment.center,
+      child: Text(
+        'Congratulations',
+        style: TextStyle(fontSize:35, fontWeight: FontWeight.w500),
+      ) 
+    );
+
+  }
+}
+
+
+
+
+
+
+
+
+
