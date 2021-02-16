@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_verification/pages/done/done.page.dart';
 import 'package:flutter_verification/pages/request/widgets/appbar.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/description-number.widget.dart';
 import 'package:flutter_verification/pages/request/widgets/fieldcode.widget.dart';
@@ -16,6 +14,8 @@ class RequestedPageFul extends StatefulWidget{
 
 class RequestedPage extends State<RequestedPageFul>{
 
+  bool isLoading=false;
+
  @override
   Widget build(context){
 
@@ -25,20 +25,24 @@ class RequestedPage extends State<RequestedPageFul>{
       home:Scaffold(
         backgroundColor:Colors.white,
         appBar: appBarRequest(),
-        body: Column(
+        body: ListView(
+          
+          physics:BouncingScrollPhysics(),
+          children:[Column(
           
           children: [
 
+            Sent(context).circularWidget(),
             TitleRequest(),
             DescriptionNumber(),
             FieldCode(),
             TimingCode(),
             QuestionCode(),
             QuestionCode().resend(),
-            Sent()
+            Sent(context)
 
           ]
-        ),
+        )]),
       )
 
     );
@@ -49,6 +53,10 @@ class RequestedPage extends State<RequestedPageFul>{
 
 class Sent extends StatelessWidget{
   
+  BuildContext context;
+  Sent(BuildContext contexts){
+    this.context=contexts;
+  }
   Widget build(context){
     
     return Container(
@@ -59,11 +67,11 @@ class Sent extends StatelessWidget{
       height:80,
       child:ClipRRect(
         borderRadius:BorderRadius.circular(40),
-        child: TextButton(
-        // elevation:0,
-        // color: Colors.blue[700],
+        child: RaisedButton(
+        elevation:0,
+        color: Colors.blue[700],
         onPressed: (){
-          // this.toDone(context);
+          this.toDone();
         },
         child: Text(
         'Submit',
@@ -77,9 +85,17 @@ class Sent extends StatelessWidget{
 
 
   }
-  void toDone(context){
-    // CupertinoPageRoute(builder: (context){
-    //  return DonePageFul();
-    // });
+  Container circularWidget(){
+    return Container(
+      margin: EdgeInsets.only(top:10,bottom:20),
+      child: CircularProgressIndicator(
+        backgroundColor: Colors.blue[700]
+      )
+
+    );
+  }
+
+  void toDone(){
+     Navigator.pushNamed(context,'done');
   }
 }
