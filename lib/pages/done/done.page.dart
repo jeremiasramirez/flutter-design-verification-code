@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_verification/pages/done/widgets/description-done.widget.dart';
+import 'package:flutter_verification/pages/done/widgets/done-button.widget.dart';
 import 'package:flutter_verification/pages/done/widgets/image-done.widget.dart';
 
 
@@ -15,6 +17,7 @@ class DonePage extends State<DonePageFul>{
     return MaterialApp(
       color: Colors.white,
       debugShowCheckedModeBanner: false,
+
       home:Scaffold(
         body: ListView( 
           
@@ -22,7 +25,9 @@ class DonePage extends State<DonePageFul>{
           children: [
            
             ImageDone(),
-            TitleDone()
+            TitleDone(), 
+            WelcomeTextDone(),
+            ButtonDone()
 
           ]
         ),
@@ -50,12 +55,3 @@ class TitleDone extends StatelessWidget{
 
   }
 }
-
-
-
-
-
-
-
-
-
