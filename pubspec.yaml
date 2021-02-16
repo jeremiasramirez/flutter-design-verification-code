@@ -27,7 +27,7 @@ flutter:
 
 
   assets:
-    - assets/images/well-done.svg
+    - assets/images/well-done.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

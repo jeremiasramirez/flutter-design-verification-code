@@ -14,7 +14,7 @@ class ImageDone extends StatelessWidget{
       child: FadeInImage(
         fit:BoxFit.cover,
         placeholder: AssetImage('assets/images/well-done.svg'),
-        image: AssetImage('assets/images/well-done.svg')
+        image: AssetImage('assets/images/well-done.png')
       ),
       // decoration: BoxDecoration(
       //   color:Colors.red[00]
